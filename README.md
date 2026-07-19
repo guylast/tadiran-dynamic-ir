@@ -1,5 +1,9 @@
 # Tadiran Dynamic IR for Home Assistant
 
+<p align="center">
+  <img src="tadiran_icon.webp" alt="Tadiran Dynamic IR icon" width="160">
+</p>
+
 [![GitHub release](https://img.shields.io/github/v/release/guylast/tadiran-dynamic-ir)](https://github.com/guylast/tadiran-dynamic-ir/releases)
 [![Validate](https://github.com/guylast/tadiran-dynamic-ir/actions/workflows/validate.yml/badge.svg)](https://github.com/guylast/tadiran-dynamic-ir/actions/workflows/validate.yml)
 
@@ -41,7 +45,7 @@ The integration bundles and serves the custom card. Add a JavaScript module
 resource to the dashboard:
 
 ```text
-/tadiran_dynamic/tadiran-remote-card.js?v=0.2.0
+/tadiran_dynamic/tadiran-remote-card.js?v=0.2.1
 ```
 
 Then add:

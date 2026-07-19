@@ -11,13 +11,21 @@ from homeassistant.core import HomeAssistant
 
 PLATFORMS = [Platform.CLIMATE]
 CARD_URL = "/tadiran_dynamic/tadiran-remote-card.js"
+ICON_URL = "/tadiran_dynamic/tadiran-icon.webp"
 
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
-    """Serve the bundled remote card."""
-    card_path = Path(__file__).parent / "frontend" / "tadiran-remote-card.js"
+    """Serve the bundled remote card and its icon."""
+    frontend_path = Path(__file__).parent / "frontend"
     await hass.http.async_register_static_paths(
-        [StaticPathConfig(CARD_URL, str(card_path), True)]
+        [
+            StaticPathConfig(
+                CARD_URL, str(frontend_path / "tadiran-remote-card.js"), True
+            ),
+            StaticPathConfig(
+                ICON_URL, str(frontend_path / "tadiran-icon.webp"), True
+            ),
+        ]
     )
     return True
 

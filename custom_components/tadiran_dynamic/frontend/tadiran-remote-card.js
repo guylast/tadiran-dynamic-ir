@@ -145,7 +145,8 @@ class TadiranRemoteCard extends HTMLElement {
         .fan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 12px; }
         .fan-key { height: 38px; border-radius: 20px; border: 1px solid #bbb; background: #f5f5f5; font-size: 12px; }
         .fan-key.active { background: #d9e2dc; box-shadow: inset 0 0 0 2px #89988e; font-weight: 700; }
-        .brand { text-align: center; margin-top: 22px; font-weight: 700; letter-spacing: 4px; font-size: 13px; }
+        .brand { display: flex; justify-content: center; margin-top: 18px; }
+        .brand img { width: 54px; height: 54px; object-fit: contain; }
         .offline { opacity: .5; }
         .missing { padding: 20px; color: var(--error-color); }
       </style>
@@ -186,7 +187,9 @@ class TadiranRemoteCard extends HTMLElement {
             <button class="fan-key ${state.attributes.swing_mode === "on" ? "active" : ""}" data-action="swing">SWING*</button>
             <div class="fan-key" style="display:flex;align-items:center;justify-content:center;border-style:dashed">* EXPERIMENTAL</div>
           </div>
-          <div class="brand">TADIRAN</div>
+          <div class="brand">
+            <img src="/tadiran_dynamic/tadiran-icon.webp?v=0.2.1" alt="Smart air conditioner">
+          </div>
         </div>
       </ha-card>`;
     this._bind();
