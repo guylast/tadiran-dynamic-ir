@@ -1,0 +1,16 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Tadiran Dynamic IR",
+        "description": "Select the Broadlink remote that faces the air conditioner.",
+        "data": {
+          "remote_entity": "Broadlink remote"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "This Broadlink remote is already configured."
+    }
+  }
+}
