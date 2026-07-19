@@ -4,8 +4,10 @@
   <img src="tadiran_icon.webp" alt="Tadiran Dynamic IR icon" width="160">
 </p>
 
-[![GitHub release](https://img.shields.io/github/v/release/guylast/tadiran-dynamic-ir)](https://github.com/guylast/tadiran-dynamic-ir/releases)
 [![Validate](https://github.com/guylast/tadiran-dynamic-ir/actions/workflows/validate.yml/badge.svg)](https://github.com/guylast/tadiran-dynamic-ir/actions/workflows/validate.yml)
+[![Latest release](https://img.shields.io/github/v/release/guylast/tadiran-dynamic-ir)](https://github.com/guylast/tadiran-dynamic-ir/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/guylast/tadiran-dynamic-ir/total)](https://github.com/guylast/tadiran-dynamic-ir/releases)
+[![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/guylast/tadiran-dynamic-ir#install-as-a-hacs-custom-repository)
 
 A custom Home Assistant climate integration for Tadiran air conditioners using
 the TAC-297H V3.2/V3.3 infrared protocol and a Broadlink remote.
