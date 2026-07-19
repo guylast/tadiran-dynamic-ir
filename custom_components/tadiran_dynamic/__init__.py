@@ -8,8 +8,12 @@ from homeassistant.components.http import StaticPathConfig
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
+from homeassistant.helpers import config_validation as cv
+
+from .const import DOMAIN
 
 PLATFORMS = [Platform.CLIMATE]
+CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
 CARD_URL = "/tadiran_dynamic/tadiran-remote-card.js"
 ICON_URL = "/tadiran_dynamic/tadiran-icon.webp"
 
