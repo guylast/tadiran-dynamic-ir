@@ -5,8 +5,8 @@
   "config_flow": true,
   "dependencies": ["http"],
   "documentation": "https://github.com/guylast/tadiran-dynamic-ir",
-  "issue_tracker": "https://github.com/guylast/tadiran-dynamic-ir/issues",
   "iot_class": "local_push",
+  "issue_tracker": "https://github.com/guylast/tadiran-dynamic-ir/issues",
   "requirements": [],
   "version": "0.2.1"
 }
