@@ -54,16 +54,16 @@ function encodePulse(microseconds) {
 function broadlinkCode(bytes) {
   const pulses = [];
   for (let repeat = 0; repeat < 2; repeat++) {
-    pulses.push(8000, 4000);
+    pulses.push(8571, 4532);
     for (const byte of bytes) {
       for (let bit = 0; bit < 8; bit++) {
         const one = (byte & (1 << bit)) !== 0;
-        pulses.push(one ? 1618 : 545, one ? 545 : 1618);
+        pulses.push(one ? 1806 : 755, one ? 755 : 1806);
       }
     }
-    if (repeat === 0) pulses.push(1618, 31000);
+    if (repeat === 0) pulses.push(1970, 22068);
   }
-  pulses.push(1618, 1618);
+  pulses.push(1970);
 
   const pulseData = Buffer.concat(pulses.map(encodePulse));
   const terminator = Buffer.from([0x00, 0x0d, 0x05]);

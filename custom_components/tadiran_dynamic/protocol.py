@@ -74,16 +74,20 @@ def broadlink_packet(frame: bytes) -> bytes:
     """Wrap a TAC-297H frame in a Broadlink 0x26 IR packet."""
     pulses: list[int] = []
     for repeat in range(2):
-        pulses.extend((8000, 4000))
+        # Median timings measured across all 137 working profile-1346 codes.
+        # They intentionally differ from the generic IRTadiran Arduino values.
+        pulses.extend((8571, 4532))
         for byte in frame:
             for bit in range(8):
                 if byte & (1 << bit):
-                    pulses.extend((1618, 545))
+                    pulses.extend((1806, 755))
                 else:
-                    pulses.extend((545, 1618))
+                    pulses.extend((755, 1806))
         if repeat == 0:
-            pulses.extend((1618, 31000))
-    pulses.extend((1618, 1618))
+            pulses.extend((1970, 22068))
+    # Working captures terminate with a single mark before Broadlink's end
+    # marker. The previous encoder emitted an additional, invalid space.
+    pulses.append(1970)
 
     payload = b"".join(_encode_pulse(pulse) for pulse in pulses)
     payload += b"\x00\x0d\x05"

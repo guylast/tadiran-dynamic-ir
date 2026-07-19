@@ -14,11 +14,13 @@ IRTadiran protocol applies to the TAC-297H V3.2/V3.3 remotes.
 ## Frame encoding
 
 - Carrier: 38 kHz (from the published IRTadiran implementation).
-- Header: approximately 8 ms mark, 4 ms space.
+- Header: median 8571 us mark, 4532 us space across profile 1346.
 - Eight data bytes, transmitted least-significant bit first.
-- Logical 1: approximately 1618 us mark, 545 us space.
-- Logical 0: approximately 545 us mark, 1618 us space.
+- Logical 1: median 1806 us mark, 755 us space.
+- Logical 0: median 755 us mark, 1806 us space.
 - Two copies of the 8-byte frame are transmitted.
+- The frames are separated by a 1970 us mark and 22068 us gap.
+- The second frame ends with a single 1970 us mark.
 
 ## Powered-state byte layout
 
