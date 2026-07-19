@@ -1,0 +1,54 @@
+{
+  "ON": {
+    "frameCount": 2,
+    "repeatsMatch": true,
+    "hex": "01 12 2a 00 00 30 00 13",
+    "mode": "heat",
+    "fan": "low",
+    "temperature": 21,
+    "powerByte": "0x30",
+    "swing": false,
+    "checksumStored": "0x13",
+    "checksumCalculated": "0x13",
+    "checksumMatches": true
+  },
+  "OFF": {
+    "frameCount": 2,
+    "repeatsMatch": true,
+    "hex": "01 12 2a 00 00 c0 00 1c",
+    "mode": "heat",
+    "fan": "low",
+    "temperature": 21,
+    "powerByte": "0xc0",
+    "swing": false,
+    "checksumStored": "0x1c",
+    "checksumCalculated": "0xa3",
+    "checksumMatches": false
+  },
+  "HEAT": {
+    "frameCount": 2,
+    "repeatsMatch": true,
+    "hex": "01 42 2a 00 00 30 00 16",
+    "mode": "heat",
+    "fan": "auto",
+    "temperature": 21,
+    "powerByte": "0x30",
+    "swing": false,
+    "checksumStored": "0x16",
+    "checksumCalculated": "0x16",
+    "checksumMatches": true
+  },
+  "COLD": {
+    "frameCount": 2,
+    "repeatsMatch": true,
+    "hex": "01 41 2c 00 00 30 00 17",
+    "mode": "cool",
+    "fan": "auto",
+    "temperature": 22,
+    "powerByte": "0x30",
+    "swing": false,
+    "checksumStored": "0x17",
+    "checksumCalculated": "0x17",
+    "checksumMatches": true
+  }
+}
